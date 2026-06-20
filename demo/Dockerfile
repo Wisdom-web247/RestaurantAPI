@@ -3,7 +3,7 @@ FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
 
 # Copy only Maven config first (for caching)
-COPY pom.xml .
+COPY demo/pom.xml .
 
 # Copy source (IMPORTANT: adjust based on your structure)
 COPY demo/src ./src
